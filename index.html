@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>ToDoList project</h2>
+      <!-- TASKS BOARD -->
+      <div id="tasks-display">
+        <!-- To do -->
+        <h3>To do</h3>
+        <ul id="activeList" class="task active"></ul>
+
+        <!-- Done -->
+        <h3>Done</h3>
+        <ul id="doneList" class="task done"></ul>
+      </div>
+      <!-- INPUT -->
+      <div id="form">
+        <input
+          type="text"
+          name="task"
+          id="input"
+          placeholder="Add a new task"
+          required
+        />
+        <button id="btn-add">ADD</button>
+      </div>
+    </div>
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

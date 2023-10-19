@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root {
+  --color1: #44426e;
+  --color2: #776483;
+  --color3: #bbaab8;
+  --color4: #292643;
+  --color5: #e99e75;
+}
+
+/* background: linear-gradient(var(--color2), var(--color1)); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color3) transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color3);
+  border-radius: 10px;
+  border: 2px solid var(--color1);
+}
+
+/* HTML */
+body {
+  background: var(--color3);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background: linear-gradient(var(--color1), var(--color2));
+  border-radius: 1em;
+  overflow: hidden;
+  min-height: 90vh;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: var(--color5);
+  margin: 2rem 2rem 0 2rem;
+}
+
+h3 {
+  color: var(--color3);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* RESULT */
+
+#tasks-display {
+  flex-grow: 1;
+  padding: 2em;
+  overflow-y: scroll;
+}
+
+.task li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+.active li {
+  background-color: var(--color3);
+}
+
+.done li {
+  background-color: #776483;
+  color: #bbaab8;
+  text-decoration: line-through;
+}
+
+.task p {
+  overflow: hidden;
+  flex: 1;
+  text-overflow: ellipsis;
+  margin-right: 1em;
+}
+
+.buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  color: white;
+  background-color: rgb(189, 56, 56);
+}
+
+.btn-done:hover {
+  color: white;
+  background-color: rgb(41, 143, 75);
+}
+
+.btn-activate:hover {
+  color: white;
+  background-color: var(--color5);
+}
+
+/* FORM */
+
+#form {
+  background-color: var(--color4);
+  padding: 2rem;
+  margin-top: 1em;
+  display: flex;
+  column-gap: 0.5em;
+}
+
+#input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.7em;
+  border-radius: 0.2em;
+  border: none;
+  font-size: 1em;
+  color: var(--color1);
+}
+
+#input::placeholder {
+  color: var(--color3);
+}
+
+#input:focus {
+  outline: 2px solid var(--color3);
+  outline-offset: 0.15em;
+}
+
+#btn-add {
+  background-color: var(--color5);
+  border: none;
+  border-radius: 0.2em;
+  padding: 0.7em 1.5em;
+  color: var(--color1);
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#btn-add:hover {
+  background-color: #fd8443;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
